@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide", # 'centered' or 'wide'
     page_title='ABMPC-USA',
     menu_items={
-        'About': "This shareable data application. Visit https://www.transmissionvamp.com."
+        'About': "This is a shareable data application. Visit https://www.transmissionvamp.com."
     }
 )
 
@@ -76,8 +76,7 @@ with model:
     # Model Bills (Money) Supply Velocity & Real-World Bond Yields
     st.header("Money Supply Velocity")
 
-    with st.expander("Chart Description"):
-        st.write("The change, from one financial period to the next, in net-financial asset flows (bills issued) as a percentage of income (GDP).")
+    st.write("The change, from one financial period to the next, in net-financial asset flows as a percentage of income (GDP).")
 
     goFig = go.Figure()
     goFig.add_trace(go.Scatter(x=df.date, y=df.velocity_bills_issued_as_percent_gdp,
@@ -122,8 +121,7 @@ with model:
     # Fiscal Balance
     st.header("Fiscal Balance")
 
-    with st.expander("Chart Description"):
-        st.write("This is the government sector fiscal balance, either in surplus (a money flow away from the Non-Government sector), or more typically, in deficit (a money flow toward the Non-Government sector).")
+    st.write("This is the government sector fiscal balance, either in surplus (a money flow away from the Non-Government sector), or more typically, in deficit (a money flow toward the Non-Government sector).")
 
     goFig1 = go.Figure()
     values = list(df.fiscal_balance)
