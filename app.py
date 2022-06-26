@@ -1,4 +1,4 @@
-# Studio: ABMPC-USA
+#ABMPC-USA
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
@@ -163,4 +163,4 @@ with model:
         st.write("Organization for Economic Co-operation and Development, Long-Term Government Bond Yields: 10-year: Main (Including Benchmark) for the United States [IRLTLT01USQ156N], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/IRLTLT01USQ156N")
 
 with footer:
-    st.caption("View a list of [data apps](https://share.streamlit.io/danodriscoll/transvamp-apps/main/app.py). Visit the [TransmissionVamp](https://www.transmissionvamp.com) website.")
+    st.caption("Visit the [TransmissionVamp](https://www.transmissionvamp.com) website.")
