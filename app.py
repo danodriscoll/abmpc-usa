@@ -151,16 +151,17 @@ with model:
     )
 
     st.plotly_chart(goFig1, use_container_width=True, sharing='streamlit')
-   
-
-    with st.expander("Data Citation"):
-        st.write("The model consumes real-world USA government expenditure and (primary) discount-rate time-series data.")
-        st.subheader("Expenditure")
-        st.write("U.S. Bureau of Economic Analysis, Real Government Consumption Expenditures and Gross Investment [GCEC1], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/GCEC1")
-        st.subheader("Interest on Bills")
-        st.write("International Monetary Fund, Interest Rates, Discount Rate for United States [INTDSRUSM193N], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/INTDSRUSM193N")
-        st.subheader("Bond-Yields")
-        st.write("Organization for Economic Co-operation and Development, Long-Term Government Bond Yields: 10-year: Main (Including Benchmark) for the United States [IRLTLT01USQ156N], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/IRLTLT01USQ156N")
+    
+    st.header("Data Citation")
+    st.write("The model consumes real-world USA government expenditure and (primary) discount-rate time-series data.")
+    st.subheader("Expenditure")
+    st.write("U.S. Bureau of Economic Analysis, Real Government Consumption Expenditures and Gross Investment [GCEC1], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/GCEC1")
+    st.subheader("Interest on Bills")
+    st.write("International Monetary Fund, Interest Rates, Discount Rate for United States [INTDSRUSM193N], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/INTDSRUSM193N")
+    st.markdown("---")
+    st.caption("For Reference:")
+    st.subheader("Bond-Yields")
+    st.write("Organization for Economic Co-operation and Development, Long-Term Government Bond Yields: 10-year: Main (Including Benchmark) for the United States [IRLTLT01USQ156N], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/IRLTLT01USQ156N")
 
 with footer:
     st.caption("Visit the [TransmissionVamp](https://www.transmissionvamp.com) website.")
