@@ -24,7 +24,7 @@ with header:
         st.session_state.disclaimer = False
 
 with dataset:
-    data_url = ('https://danodriscoll.github.io/abmpc-usa/abmpc-real-us-02.csv')
+    data_url = ('https://danodriscoll.github.io/abmpc-usa/abmpc-real-us-03.csv')
     
     @st.cache
     def load_data(nrows):
@@ -37,7 +37,7 @@ with model:
         st.write("ABMPC output consuming United States of America government expenditures and (primary) discount-rate spanning financial year 1974 to present day.")
 
     with colB:    
-        st.text("Model Run: 10th June 2022")
+        st.text("Model Run: 07th July 2022")
         disclaimer = st.checkbox("Disclaimer: I accept it's not investment advice.")
         if disclaimer:
             st.session_state.disclaimer = True
@@ -64,7 +64,7 @@ with model:
             st.write("Please accept the disclaimer to view chart data.")
 
     with col9:
-        finQuarters = 192 # Default number of financial quarters to show.
+        finQuarters = 193 # Default number of financial quarters to show.
         quarters = st.slider("Financial Quarters", min_value=16, max_value=200, value=finQuarters, step=2)
 
     # Load data if disclaimer is accepted.
@@ -156,7 +156,7 @@ with model:
     with st.expander("Data Citation"):
         st.write("The model consumes real-world USA government expenditure and (primary) discount-rate time-series data.")
         st.subheader("Expenditure")
-        st.write("U.S. Bureau of Economic Analysis, Government total expenditures [W068RCQ027SBEA], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/W068RCQ027SBEA")
+        st.write("U.S. Bureau of Economic Analysis, Real Government Consumption Expenditures and Gross Investment [GCEC1], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/GCEC1")
         st.subheader("Interest on Bills")
         st.write("International Monetary Fund, Interest Rates, Discount Rate for United States [INTDSRUSM193N], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/INTDSRUSM193N")
         st.subheader("Bond-Yields")
